@@ -3,17 +3,20 @@ package package01;
 public class Cuadrado extends Figuras {
     private double lado;
 
-    Cuadrado(double lado) {
+    public Cuadrado(double lado) {
         this.lado = lado;
     }
 
-    void calcularArea() {
+    @Override
+    public void calcularArea() {
         double area = Math.pow(lado, 2);
-        MostrarCalculo(area);
+        System.out.println("El area del cuadrado es :" + area);
     }
 
-    void calcularVolumen() {
+    @Override
+    public void calcularVolumen() {
         double volumen = Math.pow(lado, 3);
-        MostrarCalculo(volumen);
+        System.out.println("El volumen del cuadrado es : " + volumen);
     }
+
 }

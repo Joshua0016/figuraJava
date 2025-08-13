@@ -5,23 +5,25 @@ public class Cilindro extends Figuras {
     double radio;
     double altura;
 
-    Cilindro(double pi, double radio, double altura) {
+    public Cilindro(double pi, double radio, double altura) {
         this.pi = pi;
         this.radio = radio;
         this.altura = altura;
     }
 
-    void calcularArea() {
+    @Override
+    public void calcularArea() {
         double areaLateral = 2 * pi * radio * altura;
         double areaBases = 2 * pi * Math.pow(radio, 2);
         double areaTotal = areaLateral + areaBases;
-        MostrarCalculo(areaTotal);
+        System.out.println("El area del cilindro es :" + areaTotal);
     }
 
-    void calcularVolumen() {
+    @Override
+    public void calcularVolumen() {
         double cuadrado = Math.pow(radio, 2);
         double volumen = pi * cuadrado * altura;
-        MostrarCalculo(volumen);
+        System.out.println("El volumen del cilindro es :" + volumen);
     }
 
 }

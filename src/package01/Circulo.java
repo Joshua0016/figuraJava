@@ -4,22 +4,25 @@ public class Circulo extends Figuras {
     private double radio;
     private double pi;
 
-    Circulo(double radio, double pi) {
+    public Circulo(double radio, double pi) {
         this.radio = radio;
         this.pi = pi;
 
     }
 
-    void calcuarArea() {
+    @Override
+    public void calcularArea() {
         double Cuadrado = Math.pow(radio, 2);
-        double Area = pi * Cuadrado;
-        MostrarCalculo(Area);
+        double area = pi * Cuadrado;
+        System.out.println("El area del circulo es :" + area);
+
     }
 
     // V=4/3pi (r)^3
-    void calcularVolumen() {
+    @Override
+    public void calcularVolumen() {
         double volumen = (4.0 / 3.0 * pi) * Math.pow(radio, 3);
-        MostrarCalculo(volumen);
+        System.out.println("El volumen del circulo es :" + volumen);
     }
 
 }

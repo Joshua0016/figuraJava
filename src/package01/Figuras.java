@@ -1,7 +1,8 @@
 package package01;
 
-public class Figuras {
-    protected void MostrarCalculo(double calculo) {
-        System.out.println("El resultado es :" + calculo);
-    }
+public abstract class Figuras {
+    public abstract void calcularArea();
+
+    public abstract void calcularVolumen();
+
 }

@@ -5,26 +5,31 @@ public class Hexagono extends Figuras {
     private double lado;
     private double apotema;
     private double altura;
+    private double area;
 
-    Hexagono(double lado, double apotema, double altura) {
+    public Hexagono(double lado, double apotema, double altura) {
         this.lado = lado;
         this.apotema = apotema;
         this.altura = altura;
     }
 
-    void calcularArea() {
+    @Override
+    public void calcularArea() {
         double perimetro = lado * 6;
-        double area = (perimetro * apotema) / 2;
-        MostrarCalculo(area);
-        calcularVolumen(area);
+        this.area = (perimetro * apotema) / 2;
+        System.out.println("El area del Hexagono es : " + area);
+
     }
 
-    void calcularVolumen(double area) {
+    @Override
+    public void calcularVolumen() {
         if (area == 0.0) {
+            System.out.println("Debes calcular el area del Hexágono primero");
             return;
         }
         double volumen = area * altura;
-        MostrarCalculo(volumen);
+        System.out.println("El volumen del Hexagono es :" + volumen);
 
     }
+
 }

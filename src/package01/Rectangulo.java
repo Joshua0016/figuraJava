@@ -5,19 +5,21 @@ public class Rectangulo extends Figuras {
     private double altura;
     private double ancho;
 
-    Rectangulo(double base, double altura, double ancho) {
+    public Rectangulo(double base, double altura, double ancho) {
         this.altura = altura;
         this.largo = base;
         this.ancho = ancho;
     }
 
-    void CalcularArea() {
+    @Override
+    public void calcularArea() {
         double area = largo * altura;
-        MostrarCalculo(area);
+        System.out.println("El area del Rectángulo es :" + area);
     }
 
-    void calcularVolumen() {
-        double area = largo * ancho * altura;
-        MostrarCalculo(area);
+    @Override
+    public void calcularVolumen() {
+        double volumen = largo * ancho * altura;
+        System.out.println("El volumen del Rectángulo es :" + volumen);
     }
 }
